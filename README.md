@@ -1,4 +1,32 @@
-# React + TypeScript + Vite
+# ComplyDesk
+
+ComplyDesk is a Vite + React compliance dashboard backed by Supabase.
+
+## Project Structure
+
+- `frontend/` - active Vite frontend, including `frontend/src/`, `frontend/public/`, and `frontend/index.html`.
+- `backend/` - backend service boundary notes. Supabase currently provides the backend; no separate API server is required.
+- `db/` - Supabase database documentation and SQL migrations.
+- `src/` - legacy source copy retained temporarily because Windows/OneDrive locked the original directory during relocation.
+- `public/` - static frontend assets.
+
+## Development
+
+```powershell
+npm install
+npm run dev
+npm run build
+```
+
+Set `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` in `.env`. Apply the SQL under `db/migrations/` in Supabase before using invoice persistence.
+
+## Deployment
+
+Deploy the repository root as a Vite application. Configure the same `VITE_*` variables in the hosting provider and run `npm run build` during deployment.
+
+---
+
+## Vite Template Notes
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
